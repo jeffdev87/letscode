@@ -1,0 +1,40 @@
+C# .NET framework
+
+Install C#, .NET
+
+.NET -> Framework (windows); Core (cross-platform)
+-> Support C# language
+
+CLR (Common language runtime); FCL (framework class library) - lib of code, reuse
+
+dotnet --info/ dotnet -h
+
+dotnet new console (new console app)
+
+dotnet run --project
+
+code . (open visual studio code in that directory)
+
+NuGet package
+
+
+csproj (pip, npm) - ref to external proj (dotnet restore)
+
+dotnet run
+  dotnet restore
+  dotnet build   -> assembly -> binary files (dll dynamic linked library)
+  
+entry point for the application Main - compiler looks for it
+
+string concatanation - break up the string --- string interpolation ($)
+
+dotnet run -- 
+-- => separates dotnet cli args from the program's cli
+
+
+array - need to specify size/ list - dynamic resize
+ 
+In .NET framework every program executes (communicate) in an operating system by using CLR (Common Language Runtime).
+
+compiler - source language -> target language -> MSIL (Msft intermediate language - exe (main), dll)
+MSIL -> JIT - just in time compiler -> Machine code

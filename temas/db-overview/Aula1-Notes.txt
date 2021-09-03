@@ -1,0 +1,101 @@
+www.draw.io - MER
+
+** Introducao:
+Boa noite pessoal, meu nome eh Jefferson, sou formado em bcc na usp sc, onde tb fiz mestrado. Tenho alguns anos de exp na industria, ha 3 anos mudei pra irlanda e ha 1 ano estou na microsoft em dublin como eng de software.
+
+- DB resolvem o problema da persistencia de dados
+- Programadores criavam suas proprias solucoes - dificil de manter, atualizar
+- BD se tornou uma area em si msm, um componente independente, com metodos proprios do design a implementacao
+Figura:
+- BD um servico na nuvem, vc instala no servidor
+- Diversas aplicacoes utilizam (areas, intercaladas, etc)
+- Varios BDs comerciais
+
+** Conceitos:
+Vamos definir melhor algumas terminologias...
+
+Dado: Uma unidade de informacao? Uma propriedade de um objeto ou coisa mais complexa?
+
+SGBD: As vezes usamos os termos BD e SGBD como sinonimos.
+
+Metadado: Repositorio git cria uma pastinha com metadados sobre aquele repo (branches, commits, etc)
+
+Indexacao: Algoritmos e estruturas de dados para ganho de performance em consultas - tempo de processamento da consultas
+
+Figura:
+Essa figura resume, bem simplificadamente, os princiapis atores em um sgbd.
+
+** Modelagem:
+
+Nesse topico, vamos falar um pouco do design de um banco de dados.
+
+Importante salientar o isolamento entre modelar a solucao de um problema e os detalhes de implementacao final.
+
+Diferentes artefatos sao gerados para explicar a solucao para diferentes publicos (cliente, programador, dba).
+
+** MER:
+Nesse curso, nos vamos nos ater a um modelo especifico de dados, o MER.
+
+Se vcs ja ouviram falar em diagramas como o UML, o MER oferece recusos para representar os entes do seu sistema.
+
+Vários tipos de atributos (multivalorado, monovalorad, identificador)
+Tipos de entidades (forte, fraca, etc)
+
+Figura:
+Essa figura ilustra um MER sobre o cadastro de alunos e cursos.
+
+Cada entidade representa um conjunto de entidades ou instancias que sao os dados de fato (a1, a2, a3.)
+
+A cardinalidade diz respeito ao numero de relacionamentos que duas ou mais entidades podem participar.
+
+** Classificacao dos SGBDs
+
+SGBDs sao desenvolvidos de acordo com uma modelagem especifica.
+
+Modelos baseados em documentos nao tem a necessidade de descrever a estrutura do objeto, eles sao represetnados diretamente em formato JSON por exemplo. Oferece mais flexibilidade e liberdade. Linguagens web e aplicacoes data science.
+
+Modelo relacional te obriga a especificar, conceituar, mais trabalhoso mas mais robusto!
+
+Figura:
+No MR, os objetos represetados sao chamaos de Relacoes (formalmente), os elementos que descrevem os objetos sao os atributos e os dados de fato, REGISTROS, ENTRADAS, os valores, sao as tuplas.
+
+Uma relacao e seus atributos sao chamados de esquema!!!
+
+Nesse contexto, podemos pensar em Tabelas, columas e linhas (rows).
+
+** Problema
+Vamos pensar no escopo!!!! Ate que ponto vamos representar, o que foi acordado com o cliente (volta na figura do conceito)
+Representar uma parte, apenas os prof, alunos e cursos.
+Veja as restricoes.
+
+MUITAS VEZES OS REQUISITOS SAO APRENSETNADOS DE FORMA VAGA, UM BOM ENGENHEIRO TRABALHA EM CONJUNTO COM O CLIENTE PRA ESCLARECIMENTOS SEMPRE QUE NECESSARIO
+
+** SQL
+Varias versoes de SQL, seguem o msm principio, sintaxe muda, ver documentacao.
+
+** Problema
+Banco de dados escolhdo o Postgres.
+
+SGBD configurado na minha maquina - defini usuario, senha e dei um nome para o banco de dados que vamos trabalhar - letscode.
+
+VC PODE CRIAR VARIOS BANCO DE DADOS INDEPENDENTES (CREATE DATABASE) - PODE DEFINIR PERMISSOES DE USUARIOS E MUITAS RESTRICOES DE ACESSO
+
+DEMONSTRAR A DOCUMENTACAO
+
+%load_ext sql
+%sql postgresql://postgres:admin@localhost/letscode
+
+// DDL
+%sql DROP TABLE IF EXISTS Professor;
+%sql CREATE TABLE Professor(ID serial NOT NULL, RG VARCHAR(10) PRIMARY KEY, Nome VARCHAR(50) NOT NULL, Endereco VARCHAR(100), DataAdmissao TIMESTAMP NOT NULL);
+%sql ALTER TABLE professor RENAME COLUMN endereco TO address;
+%sql ALTER TABLE Professor RENAME COLUMN RG to RegistroGeral;
+%sql alter table professor add column xuxa varchar(20) default('ilarie');
+
+// DML
+%sql INSERT INTO Professor(RG, Nome, Endereco) VALUES('55555', 'Alberto', 'Rua das Pedras');
+%sql INSERT INTO Professor(RG, Nome, Endereco) VALUES('7777', 'Tereza', 'Rua de Pedras');
+%sql DELETE FROM professor WHERE nome LIKE 'Tereza';
+%sql SELECT * FROM Professor;
+%sql SELECT * FROM Professor WHERE endereco LIKE '%de%';
+
