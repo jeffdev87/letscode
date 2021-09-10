@@ -11,3 +11,15 @@ Conteudo extra (se der tempo)
 - DW (banco de dados informacional)
 - Utilizar o postgres em um Docker container
 - Um pouco mais sobre Git
+
+Avisos:
+
+- Presenca: Metade da aula
+- Projeto.
+- Correcao de exercicios (medir o aprendizado durante o curso):
+  - Entrega no class
+  - Resposta disponivel apos a entrega
+  - Duvidas no inicio das aulas
+  - Vou corrigir de forma geral e comentar os principais erros.
+- Correcao do projeto ou prova:
+  - Correcao sera mais individualizada
