@@ -1,0 +1,13 @@
+Expectativas com o curso:
+
+- Estruturar os dados, tabelas, variaveis climaticas
+- SQL, queries
+- Extrair info da nuvem - aws, azure
+- Contexto de cientista de dados
+- Aplicacao do dia-dia
+
+Conteudo extra (se der tempo)
+
+- DW (banco de dados informacional)
+- Utilizar o postgres em um Docker container
+- Um pouco mais sobre Git
