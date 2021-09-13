@@ -23,3 +23,8 @@ Avisos:
   - Vou corrigir de forma geral e comentar os principais erros.
 - Correcao do projeto ou prova:
   - Correcao sera mais individualizada
+
+- Envio dos exercicios e projeto:
+
+E-mail: williamtx1987@gmail.com
+Subject: 767_firstname_lastname_aulaXX.sql
