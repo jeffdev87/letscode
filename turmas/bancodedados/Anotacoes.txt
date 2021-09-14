@@ -24,4 +24,8 @@ Avisos:
 - Envio dos exercicios e projeto:
 
 E-mail: williamtx1987@gmail.com
-Subject: 767_firstname_lastname_aulaXX.sql
+Subject: 767_firstname_lastname_aulaXX
+
+Links:
+
+Resetar password Postgres:https://www.postgresqltutorial.com/postgresql-reset-password/
