@@ -9,8 +9,8 @@ Expectativas com o curso:
 Conteudo extra (se der tempo)
 
 - DW (banco de dados informacional)
-- Utilizar o postgres em um Docker container
-- Um pouco mais sobre Git
+- Utilizar o postgres em um Docker container (ok - material nos slides da 1 aula)
+- Um pouco mais sobre Git (ok)
 
 Avisos:
 
