@@ -14,7 +14,11 @@ Conteudo extra (se der tempo)
 
 Links uteis:
 
-Resetar password Postgres:https://www.postgresqltutorial.com/postgresql-reset-password/
+- Resetar password Postgres:https://www.postgresqltutorial.com/postgresql-reset-password/
+- Material auxiliar:
+  https://sites.google.com/site/uniplibancodedados1
+  http://wiki.icmc.usp.br/index.php/Pagina_nova(eduardoh)
+  http://wiki.icmc.usp.br/index.php/P%C3%A1gina_principal_CoteiaWIKI
 
 Avisos:
 
