@@ -14,7 +14,21 @@ Conteudo extra (se der tempo)
 
 Links uteis:
 
-- Resetar password Postgres:https://www.postgresqltutorial.com/postgresql-reset-password/
+- SQL no Jupyter notebook:
+  https://towardsdatascience.com/jupyter-magics-with-sql-921370099589
+
+- Tutorial CREATE TABLE:
+  https://www.postgresqltutorial.com/postgresql-create-table/
+
+- DB Migrations em NodeJS (gerenciar alteracoes no esquema do banco):
+  https://itnext.io/updating-an-sql-database-schema-using-node-js-6c58173a455a
+
+- Diferenca entre Varchar, char e text:
+  https://www.postgresqltutorial.com/postgresql-char-varchar-text/
+
+- Resetar password Postgres:
+  https://www.postgresqltutorial.com/postgresql-reset-password/
+
 - Material auxiliar:
   https://sites.google.com/site/uniplibancodedados1
   http://wiki.icmc.usp.br/index.php/Pagina_nova(eduardoh)
