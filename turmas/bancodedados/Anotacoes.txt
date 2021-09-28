@@ -14,6 +14,9 @@ Conteudo extra (se der tempo)
 
 Links uteis:
 
+- COPY - Problemas de permissao:
+  https://www.neilwithdata.com/copy-permission-denied
+
 - SQL no Jupyter notebook:
   https://towardsdatascience.com/jupyter-magics-with-sql-921370099589
 
