@@ -1,0 +1,72 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Banco de Dados Postgres - RDS
+
+##############################
+#        Parameters          #
+##############################
+Parameters:
+  RDSName:
+    Description: Nome do DB
+    Type: String
+    Default: letscode2
+  MasterUsername:
+    Description: Nome do usuario do BD
+    Type: String
+    Default: letscode
+  MasterUserPassword:
+    Description: Senha do usuario do BD
+    Type: String
+    Default: bdsenhaletscode
+  RDSInstanceType:
+    Type: String
+    Description: Tipo instancia RDS
+    Default: db.t2.micro
+  Engine:
+    Description: Tipo Sistema de Gerenciamento de Banco de Dados
+    Type: String
+    Default: postgres
+  EngineVersion:
+    Description: Versão do Sistema de Gerenciamento de Banco de Dados
+    Type: String
+    Default: "12.5"
+  DBAllocatedStorage:
+    Default: '20'
+    Description: Disco do banco de dados
+    Type: String
+  StorageType:
+    Description: Tipo de armazenamento, valores válidos standard | gp2 | io1
+    Type: String
+    Default: gp2
+  MultiAZ:
+    Description: Multi-AZ
+    Type: String
+    Default: 'false'
+    AllowedValues:
+      - 'true'
+      - 'false'
+  BkpRetentionPeriod:
+    Description: Periodo dos backups a serem retidos, deve ser um valor de 0 a 35. 0 desativa backups automatizados
+    Type: Number
+    Default: 0
+
+##############################
+#        Resources          #
+##############################
+Resources:
+  RDSInstance:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      AllocatedStorage: !Ref DBAllocatedStorage
+      StorageType: !Ref StorageType
+      DBInstanceClass: !Ref RDSInstanceType
+      Engine: !Ref Engine
+      EngineVersion: !Ref EngineVersion
+      MasterUsername: !Ref MasterUsername
+      MasterUserPassword: !Ref MasterUserPassword
+      DBInstanceIdentifier: !Ref RDSName
+      DBName: !Ref RDSName
+      MultiAZ: !Ref MultiAZ
+      PubliclyAccessible: true
+      StorageEncrypted: false
+      AutoMinorVersionUpgrade: true
+      BackupRetentionPeriod: !Ref BkpRetentionPeriod
