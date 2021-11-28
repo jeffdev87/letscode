@@ -1,0 +1,46 @@
+Análise Complexidade - 2
+
+1
+// non-recursive
+def sum(arr):
+    sum = 0 -> 1
+    for el in arr: -> n
+        sum += el -> 1
+    return sum
+    
+    1 + n -> O(n)
+
+// recursive
+
+def sum_rec(arr, ini):
+    if ini >= len(arr):
+        return 0
+    return arr[ini] + sum_rec(arr, ini + 1)
+
+def sum_rec(arr, n):
+    if n <= 0:
+        return 0
+    return arr[n-1] + sum_rec(arr, n - 1)
+
+S(0) = 0
+S(n) = 1 (soma) + n (copy array) + 1 (copy 2nd param) + S(n - 1) = (n + 1) + 1 + S(n-1), n > 0
+S(n) = (n + 2) + S(n-1) = (n + 2) + [n + 2 + S(n - 2)] = 2(n + 2) + S(n - 2) = 2(n + 2) + [n + 2 + S(n - 3)]
+= 3(n + 2) + S(n - 3)
+...
+= n(n + 2) + S(n - n)
+= n(n + 2) + S(0)
+= n^2 + 2n
+
+~ O(n^2)
+
+ou
+
+S(n) = S(n - 1) + n + 2 = [S(n - 2) + n - 1 + 2] + n + 2 = S(n - 2) + 2n + 3 = [S(n - 2 - 1) + n - 2 + 2] + 2n + 3
+= S(n - 3) + 3n + 3 = S(n - 3) + 3(n + 1)
+...
+= S(n - n) + n(n + 1)
+= S(0) + n^2 + n ~ O(n^2)
+
+       
+
+
