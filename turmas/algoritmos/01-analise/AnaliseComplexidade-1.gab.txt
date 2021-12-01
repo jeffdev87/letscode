@@ -11,7 +11,13 @@ log cresce menos do que raiz, entao algoritmo com ordem g(n) é melhor
 
 2
 
-2.1
+2/n; 37; n; nlog(logn), nlogn, nlog(n^2), n(logn)^2, sqrt(n), sqrt(n^3), sqrt(2^n), n^2,n^2log(n),n^3,2^n
+
+====
+
+3
+
+3.1
 
 1 - init i
 n + 1 - comp i<-1 (menor igual)
@@ -24,7 +30,7 @@ n - inc i
 
 =====
 
-2.2
+3.2
 
 Elem ultima pos (worst case), elem en ordem crescente pro if ser executado sempre
 
@@ -39,7 +45,7 @@ n-1 -> att max
 
 =====
 
-2.3
+3.3
 
 worst case - todos os elementos s distintos
 
@@ -67,7 +73,7 @@ n-1 -> soma i+1
 
 ====
 
-2.4
+3.4
 Pior caso: elem n esta no arranjo
 
 1 -> att i
@@ -77,3 +83,12 @@ n -> inc i
 n -> attribui i
 
 3n + 2 -> O(n)
+
+=====
+
+4
+
+4.1 = O(n)
+4.2 = O(n^2)
+4.3 = O(n^3)
+4.4 = O(n^2)
