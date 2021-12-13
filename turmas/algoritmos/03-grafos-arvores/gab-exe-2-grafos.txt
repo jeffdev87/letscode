@@ -1,0 +1,37 @@
+def pathR(node, graph, visited, blank):
+    if node not in visited:
+        visited.append(node)
+        if node not in graph.keys():
+            return
+        for neighbour in graph[node]:
+            print(f'{blank}{node}-{neighbour}')
+            pathR(neighbour, graph, visited, f'{blank}  ')
+
+f = open('./input.txt', 'r')
+n_tests = int(f.readline().strip())
+count = 1
+while (count <= n_tests):
+    graph_def = f.readline().strip().split(' ')
+    n_v = int(graph_def[0])
+    n_e = int(graph_def[1])
+    
+    graph = dict()
+    for i in range(0, n_e):
+        edge = f.readline().strip().split(' ')
+        v1 = int(edge[0])
+        v2 = int(edge[1])
+        
+        if v1 not in graph.keys():
+            graph[v1] = []
+        if v2 not in graph[v1]:
+            graph[v1].append(v2)
+
+    print(f'Caso {count}:')
+    visited = list()
+    for v in graph.keys():
+        if v not in visited:
+            pathR(v, graph, visited, '  ')
+            print()
+    count += 1
+    
+f.close()
