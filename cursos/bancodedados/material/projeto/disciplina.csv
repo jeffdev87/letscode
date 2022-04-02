@@ -1,0 +1,39 @@
+id_disc,nome,qtd_credito,matricula_prof
+1,Cálculo 1,2,5
+2,Cálculo 2,3,1
+3,Probabilidade,4,8
+4,Equações Lineares,5,16
+5,Matemática Financeira,3,17
+6,Admin. e Contabilidade,2,9
+7,Mercado de Capitais,4,17
+8,Python,3,4
+9,Data Science e IA,5,12
+10,Banco de Dados,6,20
+11,Circuitos Elétricos,3,13
+12,Instalações Elétricas,4,13
+13,Elementos do Marketing,3,2
+14,Mapeamento do Público,4,2
+15,Criação e Melhorias,5,2
+16,Mídias Sociais,6,2
+17,Comportam. do Consumidor,3,18
+18,Comércio exterior,4,6
+19,Gestão de Projetos,5,6
+20,Introd. Psicologia,2,18
+21,Gestão de Competências,3,14
+22,Identif. Realoc. de Talentos,4,14
+23,Concepções de Linguagem,2,10
+24,Gêneros Literários,3,10
+25,Variação Linguística,4,10
+26,Literaturas na Educação Básica,5,10
+27,Inglês Básico,2,19
+28,Inglês Intermediário,3,19
+29,Inglês Avançado,4,15
+30,Espanhol Básico,2,3
+31,Espanhol Intermediário,3,3
+32,Espanhol Avançado,4,15
+33,Alemão Básico,2,11
+34,Alemão Intermediário,3,11
+35,Alemão Avançado,4,11
+36,Francês Básico,2,7
+37,Francês Intermediário,3,7
+38,Francês Avançado,4,7
