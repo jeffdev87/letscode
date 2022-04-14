@@ -1,0 +1,94 @@
+Análise Complexidade - 1
+
+1
+
+f(n) = n * sqrt(n)
+g(n) = n * logn
+
+log cresce menos do que raiz, entao algoritmo com ordem g(n) é melhor
+
+====
+
+2
+
+2/n; 37; n; nlog(logn), nlogn, nlog(n^2), n(logn)^2, sqrt(n), sqrt(n^3), sqrt(2^n), n^2,n^2log(n),n^3,2^n
+
+====
+
+3
+
+3.1
+
+1 - init i
+n + 1 - comp i<-1 (menor igual)
+n - inc i
+
+1 soma + 1 att + 2 mult -> 4 * n
+1 - escrita
+
+4 + 6n -> O(n)
+
+=====
+
+3.2
+
+Elem ultima pos (worst case), elem en ordem crescente pro if ser executado sempre
+
+1   -> att
+1   -> att i
+n-2 -> inc i
+n-1 -> comp i
+n-1 -> comp max
+n-1 -> att max
+
+=> 4n -5 + 2 = 4n - 3 => O(n)
+
+=====
+
+3.3
+
+worst case - todos os elementos s distintos
+
+i        i
+7 8 9 10 4 5 -> n = 6
+  j        j 
+
+1   -> init i
+n-3 -> inc i
+n-2 -> comp i
+
+n-1 -> init j
+n-1 -> soma i+1
+
+#comp j
+(n - 1) + (n - 2) + (n - 3) + (n - 4) ... + 0 -> sum(n - i){i = 1, i ate n} -> n^2 
+
+#comp a[i],a[j]
+(n - 1) + (n - 2) + (n - 3) + (n - 4) ... + 0 -> sum(n - i){i = 1, i ate n} -> n^2 
+
+
+(sum(i){i = 0, i ate n} = n^2)
+
+=> 2*n^2 + 4n - 6 -> O(n^2)
+
+====
+
+3.4
+Pior caso: elem n esta no arranjo
+
+1 -> att i
+1 -> comp final
+n -> comp i<n && a[i]!=k
+n -> inc i
+n -> attribui i
+
+3n + 2 -> O(n)
+
+=====
+
+4
+
+4.1 = O(n)
+4.2 = O(n^2)
+4.3 = O(n^3)
+4.4 = O(n^2)
