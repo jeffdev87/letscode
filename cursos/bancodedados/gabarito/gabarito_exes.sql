@@ -1,5 +1,5 @@
 --##############################################################################
---04-SQL-DML
+--aula 04 - p1
 --##############################################################################
 
 -- Q1 Selecione os id's únicos de territórios da tabela employee_territories.
@@ -87,7 +87,7 @@ WHERE lower(contact_title) like '%sales%'
 and country in ('Sweden', 'Germany', 'Denmark');
 
 --##############################################################################
---04-SQL-DML-P2
+--aula 04 - p2
 --##############################################################################
 
 -- Q1
@@ -231,7 +231,7 @@ FROM orders
 ORDER BY freight;
 
 --##############################################################################
---04-SQL-DML-P3
+--aula 05 - p1
 --##############################################################################
 
 -- Q1 - Da tabela territories:
@@ -447,7 +447,7 @@ group by product_id, supplier_id, category_id
 order by supplier_id;
 
 --##############################################################################
---04-SQL-DML-P4
+--aula 05 - p2
 --##############################################################################
 
 -- Q1 Faça um relatório que traga o número de cidades por estado (nome por extenso) e ordene:
@@ -547,7 +547,7 @@ AND ROUND(AVG(freight + total_sem_frete)::NUMERIC, 2) > 700
 ORDER BY employee_id;
 
 --##############################################################################
---05-SQL-DDL
+--aula 06
 --##############################################################################
 
 -- Q1. Crie duas tabelas: produto e categoria. Essas duas tabelas devem estar relacionadas.
@@ -611,11 +611,7 @@ VALUES
 INSERT INTO turmas(turma_id, aluno_id)
 VALUES ('I_A', 1), ('I_B', 2), ('P_A', 3);
 
---##############################################################################
---05-SQL-DDL-P2
---##############################################################################
-
--- Q2. Copie o resultado de uma consulta qualquer para um arquivo utilizando o comando COPY.
+-- Q5. Copie o resultado de uma consulta qualquer para um arquivo utilizando o comando COPY.
 COPY (
 SELECT 
 	product_id, 
