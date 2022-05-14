@@ -1,0 +1,19 @@
+Banco de Dados - Receita
+
+Receita -> (m) possui (qtde) -> Ingrediente (n)
+
+Receita -> id, tipo, nome, tempo_prep, modo, nporcao
+           1,  omelete,    15,         dfsdfsd, 2
+		   2,  bolo,        30,          dfdfdfd, 8 
+
+Ingrediente -> id, nome, medida, tipo, estado
+               1,  Ovo,  uni,no-vegan, null
+			   2, sal, gramas,vegan, refinado,
+			   3, tomate, uni, vegan, picado
+			   
+receita_ing -> receita_id, ingr_id, qte
+               1,          1,     2 
+               1,          2,     10
+               1,          3,     1
+			   2,          1      4
+
